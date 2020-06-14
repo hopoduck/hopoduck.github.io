@@ -11,8 +11,6 @@ let todoLists = [];
 function deleteTodoLists(event) {
   const btn = event.target;
   const div = btn.parentNode.parentNode;
-  console.log(btn);
-  console.log(div);
   todoList.removeChild(div);
   const cleantodoLists = todoLists.filter(function (tasks) {
     return parseInt(tasks.id) !== parseInt(div.id);
