@@ -73,7 +73,7 @@ function getWeather(positionObj) {
   const lat = positionObj.latitude;
   const lon = positionObj.longitude;
   fetch(
-    `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
   )
     .then(function (respons) {
       return respons.json();
