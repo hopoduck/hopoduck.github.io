@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "InfinitySans-RegularA1";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* RESET */
+* {
+  font-family: "InfinitySans-RegularA1", Arial, Helvetica, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  color: white;
+}
+body {
+  overflow: hidden;
+}
+*:focus {
+  outline: none;
+}
+
+/* layout */
+.wrap {
+  margin: 0 auto;
+  padding-top: 10%;
+  width: 900px;
+}
+
+/* clock */
+.clock {
+  font-size: 100pt;
+  text-align: center;
+  filter: drop-shadow(0 0 4px grey);
+}
+.clock > .sec {
+  font-size: 70pt;
+}
+
+/* weather */
+.weather > .weather_icon {
+  width: 50px;
+  height: 50px;
+  fill: white;
+  float: middle;
+  vertical-align: middle;
+  filter: invert(100%);
+}
+.weather {
+  font-size: 20pt;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  filter: drop-shadow(0 0 2px grey);
+}
+
+/* greeting */
+.formName {
+  display: inline;
+}
+.formName > input {
+  height: 40px;
+  font-size: 20pt;
+  width: 200px;
+  vertical-align: middle;
+  background: none;
+  border: none;
+}
+.greeting {
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+  font-size: 40pt;
+  filter: drop-shadow(0 0 2px black);
+}
+
+/* todo-list */
+.todo_wrap {
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  filter: drop-shadow(0 0 3px grey);
+}
+.todo_title {
+  font-size: 30pt;
+  border-bottom: 3px solid whitesmoke;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+.taskForm {
+  float: right;
+}
+.taskInput {
+  text-align: right;
+  width: 600px;
+  height: 50px;
+  vertical-align: bottom;
+  font-size: 25pt;
+  border: none;
+  background: none;
+  padding-right: 10px;
+}
+.taskInput::placeholder {
+  color: white;
+}
+.todolist {
+  float: left;
+  vertical-align: middle;
+}
+.todo_li {
+  width: 100%;
+  height: 40px;
+  margin: 5px 0px;
+  /* position: absolute; */
+  animation-name: rightFadeIn;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+.todo_li > .del {
+  width: 35px;
+  height: 35px;
+  margin: 2.5px;
+  margin-right: 10px;
+  fill: white;
+  float: left;
+  cursor: pointer;
+}
+.todo_li > span {
+  font-size: 20pt;
+  line-height: 40px;
+  vertical-align: middle;
+}
+/* setting */
+.setting {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  right: 20px;
+  z-index: 9;
+  filter: invert(100%);
+}
+.settingHidden {
+  opacity: 0%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  right: 20px;
+  z-index: 9;
+  filter: invert(100%);
+}
+.settingHidden:hover {
+  opacity: 100%;
+  visibility: visible;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+/* animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes rightFadeIn {
+  0% {
+    opacity: 0%;
+    margin-left: 100%;
+  }
+  100% {
+    opacity: 100%;
+    margin-left: 0%;
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- http://192.168.0.26/study/normad-coder/13-14/ -->
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Momontum</title>
+    <link rel="stylesheet" href="src/index.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- clock -->
+      <div class="clock">
+        <span class="hour">00</span>:<span class="min">00</span>:<span
+          class="sec"
+          >00</span
+        >
+      </div>
+      <!-- weather -->
+      <div class="weather"></div>
+      <!-- greeting, name input -->
+      <div class="greeting">
+        Hello,
+        <span class="name">
+          <form class="formName">
+            <input
+              type="text"
+              name="name"
+              class="inputName"
+              placeholder="Input your name"
+            />
+          </form>
+        </span>
+      </div>
+      <!-- todo list -->
+      <div class="todo_wrap">
+        <h2 class="todo_title">
+          Todo
+
+          <form class="taskForm">
+            <input
+              type="text"
+              name="taskInput"
+              class="taskInput"
+              placeholder="Input your tasks... "
+            />
+          </form>
+        </h2>
+        <ul class="todolist"></ul>
+      </div>
+      <!-- setting page -->
+      <a href="setting.html" class="setting">
+        <img src="src/setting.svg" alt="setting" />
+      </a>
+    </div>
+  </body>
+  <script src="src/clock.js"></script>
+  <script src="src/greeting.js"></script>
+  <script src="src/todo.js"></script>
+  <script src="src/weather.js"></script>
+  <script src="src/background.js"></script>
+  <script>
+    const settingHidden = localStorage.getItem("settingHidden"),
+      setting = document.querySelector(".setting");
+    if (settingHidden === "true") {
+      setting.classList.add("settingHidden");
+      setting.classList.remove("setting");
+    }
+  </script>
+</html>
